@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1014">
+  <meta name="description" content="Forma: il tuo diario palestra personale, offline e con dati salvati esclusivamente sul dispositivo.">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>FORMA — Diario Palestra</title>
+</head>
+<body>
+  <div id="app" class="app-root">
+    <div class="loading-screen"><span class="brand-icon">F</span><p>Caricamento del diario...</p></div>
+  </div>
+  <dialog id="app-dialog" class="app-dialog" aria-label="Modifica dati"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="backup-file" type="file" accept="application/json,.json" hidden>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
