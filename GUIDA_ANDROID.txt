@@ -1,0 +1,89 @@
+FORMA GYM JOURNAL 1.2 — INSTALLAZIONE DA ZERO SU ANDROID
+26 ottobre 2026
+=========================================================
+
+IMPORTANTE
+- Non hai installato nulla: PARTI DIRETTAMENTE da FORMA 1.2.
+- Non installare prima 1.0 o 1.1; non servono backup o migrazioni.
+- E' una PWA, NON un APK da installare dal file ZIP.
+- FORMA e' gratis da eseguire. AI Bridge non usa API, non chiede una carta
+  di credito ed e' pensato per il tuo abbonamento ChatGPT Go esistente.
+- L'integrazione con ChatGPT e' MANUALE: copia e incolla; non c'e' login
+  ChatGPT dentro FORMA e non c'e' sincronizzazione automatica.
+
+A) PREPARAZIONE SUL COMPUTER (CONSIGLIATA)
+1. Scarica FORMA_Gym_Android_PWA_v1_2.zip e scompattalo in una cartella.
+2. Verifica che nella cartella siano presenti index.html, app.js,
+   ai_bridge.js, db.js, planner.js, features.js, catalog.js, styles.css,
+   sw.js, manifest.webmanifest, .nojekyll e la sottocartella icons/.
+3. Vai su https://github.com e crea/accedi a un account gratuito.
+4. Crea un repository PUBBLICO, ad esempio forma-palestra. Il codice
+   pubblicato e' visibile, ma NON conterra' gli allenamenti che salverai
+   successivamente sul tuo telefono.
+5. Nel repository usa Add file > Upload files. Carica il CONTENUTO della
+   cartella scompattata (non lo ZIP, non la cartella contenitore),
+   mantenendo esattamente la struttura delle sottocartelle.
+   Verifica che index.html appaia nella radice del repository e che
+   icons/icon-192.png e le altre icone siano in icons/.
+6. Conferma con Commit changes. Vai in Settings > Pages:
+   Build and deployment > Source: Deploy from a branch;
+   Branch: main; Folder: / (root); poi Save.
+7. Apri il link HTTPS che appare nella pagina Pages (Visit site).
+   L'indirizzo e' simile a:
+   https://TUO-UTENTE.github.io/forma-palestra/
+   Se hai una pagina 404, verifica che index.html sia proprio nella radice.
+
+B) INSTALLA SUL TELEFONO ANDROID
+8. Apri il link HTTPS con Chrome Android (NON in incognito).
+9. Menu Chrome con i tre puntini > Installa app oppure Aggiungi alla
+   schermata Home. La dicitura varia con versione Chrome/Android.
+10. Avvia FORMA dalla nuova icona, crea un profilo di prova e scegli giorni
+    e focus. NON occorre collegare alcun account o attivare l'AI.
+
+C) TEST DA FARE PRIMA DI USARLA SUL SERIO
+[ ] Genera la scheda con dati di prova.
+[ ] Registra una serie di prova (kg, ripetizioni, RIR se desideri).
+[ ] Testa timer, pausa, recupero e calendario.
+[ ] Chiudi e riapri FORMA: la serie deve rimanere salvata.
+[ ] Con app caricata almeno una volta, metti il telefono in modalita' aereo.
+[ ] Riapri FORMA e verifica il funzionamento offline.
+[ ] Profilo > Esporta backup JSON. Conservane una copia fuori dal telefono.
+[ ] Esci dalla modalita' aereo.
+[ ] Coach: prova Copia report e istruzioni, apri ChatGPT e incolla.
+[ ] In una settimana ancora non iniziata, verifica anteprima di un JSON
+    prodotto da ChatGPT, poi approva solo le modifiche che vuoi usare.
+
+D) COME SI USA IL BRIDGE AI SENZA SPESE EXTRA
+1. Vai nella scheda Coach (in basso). Scegli 2, 4 o 6 settimane.
+2. Peso corporeo e note esercizi sono ESCLUSI per impostazione predefinita.
+   Attivali solo se vuoi condividere quei dati con ChatGPT.
+3. Premi "Copia report e istruzioni" (oppure "Salva TXT").
+4. Premi "Apri ChatGPT". Apri una tua conversazione o Progetto ChatGPT Go,
+   incolla il report e invia. Il pulsante non inoltra il report automaticamente.
+5. Chiedi a ChatGPT di restituire solo un JSON (il report contiene gia'
+   le istruzioni e il formato). Copia la risposta JSON.
+6. Torna in FORMA > Coach, incolla il JSON > Controlla la proposta.
+7. Vedrai le modifiche proposte, i valori precedenti/nuovi e le motivazioni.
+   Seleziona solo quelle desiderate e premi "Applica selezionate".
+8. Conferma la finestra di controllo. Solo ora FORMA modifica la scheda.
+
+IMPORTANTE: Se hai gia' registrato serie nella settimana piu' recente,
+le serie svolte NON vengono modificate. Per far analizzare e modificare un
+piano interamente nuovo, crea prima "Genera la prossima settimana" in Scheda.
+
+E) BACKUP, PRIVACY E LIMITI
+- Database IndexedDB sul dispositivo: forma-gym-local-v1 / app-state.
+- Backup JSON manuale in Profilo, non cifrato. Non caricarlo nel repository
+  GitHub pubblico e non incollarlo per intero in ChatGPT.
+- Il report standard esclude nome e cognome, peso e note. Controlla comunque
+  nomi di esercizi personalizzati prima di incollarlo in ChatGPT.
+- ChatGPT Go NON include crediti API. Il bridge non usa API, quindi non
+  richiede pagamenti aggiuntivi, ma l'uso di ChatGPT resta soggetto ai
+  normali limiti previsti dal tuo piano.
+- Suono/vibrazione timer in background dipendono da Android/Chrome.
+- Non e' garantito che il browser non elimini mai i dati locali: esporta
+  backup periodicamente e conservali anche su computer.
+- La pubblicazione del sito richiede HTTPS: non e' sufficiente aprire
+  index.html direttamente dal file manager Android.
+
+PER MAGGIORI DETTAGLI: LEGGI README.md e il dossier Word aggiornato.
